@@ -1,36 +1,35 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Paycheck & Cost of Living Hub
 
-## Getting Started
+A Next.js site with **net salary calculator**, **cost of living comparison**, and **job offer compare** for US, UK & Europe. Built for SEO and Google AdSense.
 
-First, run the development server:
+## Run locally
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+## Features
 
-To learn more about Next.js, take a look at the following resources:
+- **Salary Calculator** (`/salary-calculator`) – Take-home pay after tax for US (federal + state), UK, Germany
+- **Cost of Living** (`/cost-of-living`) – Compare two cities and equivalent salary
+- **Offer Compare** (`/offer-compare`) – Compare two job offers with tax and COL adjustment
+- **SEO** – Metadata, sitemap, robots.txt, JSON-LD (WebSite schema)
+- **Ad slots** – Placeholder components ready for Google AdSense (see `src/components/AdSlot.tsx`)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## AdSense
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Replace the placeholder in `AdSlot.tsx` with your AdSense unit. Use responsive units and place slots where indicated (top, mid-content, bottom) for policy compliance.
 
-## Deploy on Vercel
+## Env
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Optional: `NEXT_PUBLIC_SITE_URL=https://yourdomain.com` for canonical URLs and sitemap.
