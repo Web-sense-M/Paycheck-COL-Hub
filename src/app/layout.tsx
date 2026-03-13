@@ -76,7 +76,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <head>
         <Script
           id="adsbygoogle-init"
           async
@@ -84,6 +84,8 @@ export default function RootLayout({
           crossOrigin="anonymous"
           strategy="afterInteractive"
         />
+      </head>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <WebsiteJsonLd />
         <Header />
         <main id="main-content">{children}</main>
