@@ -16,7 +16,8 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://paycheckcolhub.com";
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL || "https://www.paycheckcitycompare.com/";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -77,6 +78,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <meta name="google-adsense-account" content="ca-pub-8089420504634185" />
         <Script
           id="adsbygoogle-init"
           async
@@ -85,7 +87,9 @@ export default function RootLayout({
           strategy="afterInteractive"
         />
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
         <WebsiteJsonLd />
         <Header />
         <main id="main-content">{children}</main>

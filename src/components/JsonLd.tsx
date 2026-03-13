@@ -1,4 +1,5 @@
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://paycheckcolhub.com";
+const baseUrl =
+  process.env.NEXT_PUBLIC_SITE_URL || "https://www.paycheckcitycompare.com/";
 
 const websiteSchema = {
   "@context": "https://schema.org",
@@ -9,7 +10,10 @@ const websiteSchema = {
     "Free net salary calculator, cost of living comparison, and job offer comparison for US, UK & Europe.",
   potentialAction: {
     "@type": "SearchAction",
-    target: { "@type": "EntryPoint", urlTemplate: `${baseUrl}/salary-calculator?q={search_term_string}` },
+    target: {
+      "@type": "EntryPoint",
+      urlTemplate: `${baseUrl}/salary-calculator?q={search_term_string}`,
+    },
     "query-input": "required name=search_term_string",
   },
 };
