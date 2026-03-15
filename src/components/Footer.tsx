@@ -26,6 +26,11 @@ export default function Footer() {
                   Job Offer Compare
                 </Link>
               </li>
+              <li>
+                <Link href="/guides" className="text-slate-600 hover:text-teal-700">
+                  Guides
+                </Link>
+              </li>
             </ul>
           </div>
           <div>

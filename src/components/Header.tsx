@@ -29,6 +29,12 @@ export default function Header() {
           >
             Offer Compare
           </Link>
+          <Link
+            href="/guides"
+            className="text-sm font-medium text-slate-600 hover:text-teal-700"
+          >
+            Guides
+          </Link>
         </nav>
       </div>
     </header>

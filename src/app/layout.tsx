@@ -22,19 +22,22 @@ const siteUrl =
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Paycheck & Cost of Living Hub | Net Salary & COL Calculator",
+    default: "Paycheck Calculator | Salary Calculator & Cost of Living Calculator",
     template: "%s | Paycheck & COL Hub",
   },
   description:
-    "Free net salary calculator, cost of living comparison, and job offer comparison for US, UK & Europe. Know your take-home pay and compare cities.",
+    "Free paycheck calculator and net salary calculator for take-home pay. Cost of living calculator to compare cities. Job offer compare calculator for US, UK & Europe.",
   keywords: [
+    "paycheck calculator",
     "salary calculator",
-    "net salary",
-    "take home pay",
-    "cost of living",
+    "net salary calculator",
+    "take home pay calculator",
+    "cost of living calculator",
+    "job offer compare",
+    "job offer compare calculator",
+    "salary after tax",
     "cost of living comparison",
     "tax calculator",
-    "salary after tax",
     "US salary",
     "UK salary",
     "Germany salary",
@@ -46,14 +49,14 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: siteUrl,
     siteName: "Paycheck & COL Hub",
-    title: "Paycheck & Cost of Living Hub | Net Salary & COL Calculator",
+    title: "Paycheck Calculator | Salary Calculator & Cost of Living Calculator",
     description:
-      "Free net salary calculator, cost of living comparison, and job offer comparison for US, UK & Europe.",
+      "Free paycheck calculator, net salary calculator, cost of living calculator, and job offer compare calculator for US, UK & Europe.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Paycheck & Cost of Living Hub",
-    description: "Free salary & cost of living tools for US, UK & Europe.",
+    title: "Paycheck Calculator | Salary & Cost of Living Calculator",
+    description: "Free paycheck calculator, salary calculator, cost of living calculator, job offer compare.",
   },
   robots: {
     index: true,

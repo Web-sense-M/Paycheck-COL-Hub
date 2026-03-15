@@ -8,29 +8,29 @@ export default function HomePage() {
       <section className="border-b border-slate-200 bg-gradient-to-b from-white to-slate-50/50">
         <div className="mx-auto max-w-4xl px-4 py-16 text-center sm:px-6 sm:py-24">
           <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">
-            Know your take-home pay and cost of living
+            Paycheck Calculator, Salary Calculator & Cost of Living Calculator
           </h1>
           <p className="mt-4 text-lg text-slate-600 sm:text-xl">
-            Free salary calculator, city comparison, and job offer comparison for the United States, UK, and Europe.
+            Free paycheck calculator and net salary calculator for take-home pay. Cost of living calculator to compare cities. Job offer compare calculator for US, UK & Europe.
           </p>
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
             <Link
               href="/salary-calculator"
               className="inline-flex items-center justify-center rounded-xl bg-teal-600 px-6 py-3 text-base font-semibold text-white shadow-sm hover:bg-teal-700"
             >
-              Net Salary Calculator
+              Paycheck Calculator
             </Link>
             <Link
               href="/cost-of-living"
               className="inline-flex items-center justify-center rounded-xl border border-slate-300 bg-white px-6 py-3 text-base font-semibold text-slate-700 shadow-sm hover:bg-slate-50"
             >
-              Cost of Living Compare
+              Cost of Living Calculator
             </Link>
             <Link
               href="/offer-compare"
               className="inline-flex items-center justify-center rounded-xl border border-slate-300 bg-white px-6 py-3 text-base font-semibold text-slate-700 shadow-sm hover:bg-slate-50"
             >
-              Job Offer Compare
+              Job Offer Compare Calculator
             </Link>
           </div>
         </div>
@@ -60,13 +60,13 @@ export default function HomePage() {
               </svg>
             </span>
             <h3 className="mt-4 text-lg font-semibold text-slate-900 group-hover:text-teal-700">
-              Net Salary Calculator
+              Paycheck Calculator
             </h3>
             <p className="mt-2 flex-1 text-sm text-slate-600">
-              Estimate take-home pay after federal and state tax, social security, and NI for US, UK, and Germany.
+              Free paycheck calculator and net salary calculator. Take-home pay after tax for US, UK, and Germany.
             </p>
             <span className="mt-4 text-sm font-medium text-teal-600 group-hover:text-teal-700">
-              Calculate →
+              Use paycheck calculator →
             </span>
           </Link>
 
@@ -80,13 +80,13 @@ export default function HomePage() {
               </svg>
             </span>
             <h3 className="mt-4 text-lg font-semibold text-slate-900 group-hover:text-teal-700">
-              Cost of Living Compare
+              Cost of Living Calculator
             </h3>
             <p className="mt-2 flex-1 text-sm text-slate-600">
-              Compare two cities and see what salary you’d need in the new city to keep the same lifestyle.
+              Free cost of living calculator. Compare two cities and see equivalent salary for the same lifestyle.
             </p>
             <span className="mt-4 text-sm font-medium text-teal-600 group-hover:text-teal-700">
-              Compare cities →
+              Use cost of living calculator →
             </span>
           </Link>
 
@@ -100,13 +100,13 @@ export default function HomePage() {
               </svg>
             </span>
             <h3 className="mt-4 text-lg font-semibold text-slate-900 group-hover:text-teal-700">
-              Job Offer Compare
+              Job Offer Compare Calculator
             </h3>
             <p className="mt-2 flex-1 text-sm text-slate-600">
-              Compare two job offers by take-home pay and cost-of-living adjusted value.
+              Free job offer compare calculator. Compare two offers by take-home pay and cost of living.
             </p>
             <span className="mt-4 text-sm font-medium text-teal-600 group-hover:text-teal-700">
-              Compare offers →
+              Use job offer compare calculator →
             </span>
           </Link>
         </div>
@@ -121,30 +121,22 @@ export default function HomePage() {
       <section className="border-t border-slate-200 bg-white">
         <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6">
           <h2 className="text-2xl font-bold text-slate-900">
-            Salary and cost of living tools for the US, UK, and Europe
+            Free Paycheck Calculator, Salary Calculator, Cost of Living Calculator & Job Offer Compare
           </h2>
           <div className="mt-6 space-y-4 text-slate-600">
             <p>
-              Whether you’re negotiating a new job, moving cities, or planning a relocation,
-              knowing your <strong>net salary</strong> (take-home pay after tax) and how
-              <strong> cost of living</strong> differs between cities helps you make better decisions.
+              Our free <Link href="/salary-calculator" className="font-medium text-teal-700 hover:underline">paycheck calculator</Link> and <Link href="/salary-calculator" className="font-medium text-teal-700 hover:underline">net salary calculator</Link> show your take-home pay after federal and state tax, social security, and National Insurance for the United States (including California, New York, Texas, and more), the United Kingdom, and Germany. Use the <strong>salary calculator</strong> to see how much you keep from any gross salary.
             </p>
             <p>
-              Our <strong>net salary calculator</strong> estimates federal and state income tax,
-              social security, National Insurance, and similar contributions for the United States
-              (including California, New York, Texas, and more), the United Kingdom, and Germany.
-              Results are for illustration only and are not a substitute for professional tax advice.
+              Our free <Link href="/cost-of-living" className="font-medium text-teal-700 hover:underline">cost of living calculator</Link> lets you compare two cities and see what salary you’d need in the new city to keep the same lifestyle. The <strong>cost of living calculator</strong> uses relative indices for housing, groceries, transport, and general expenses across major US, UK, and European cities.
             </p>
             <p>
-              The <strong>cost of living comparison</strong> tool shows you how much you’d need to
-              earn in another city to maintain a similar standard of living. We use relative indices
-              for housing, groceries, transport, and general expenses across major US, UK, and
-              European cities.
+              Our free <Link href="/offer-compare" className="font-medium text-teal-700 hover:underline">job offer compare calculator</Link> combines both: enter two job offers (city + salary) and we show take-home pay for each, then adjust for cost of living so you can see which offer gives you more purchasing power. Use the <strong>job offer compare calculator</strong> when you have two offers and want to compare them fairly.
             </p>
             <p>
-              The <strong>job offer compare</strong> tool combines both: it calculates take-home pay
-              for each offer and then adjusts for cost of living so you can see which offer gives
-              you more purchasing power in the same city terms.
+              See our <Link href="/guides" className="font-medium text-teal-700 hover:underline">Guides</Link> for
+              examples like <Link href="/salary-after-tax/us/ca/70000" className="font-medium text-teal-700 hover:underline">$70,000 after tax in California</Link> and{" "}
+              <Link href="/cost-of-living-compare/new-york/london" className="font-medium text-teal-700 hover:underline">New York vs London cost of living</Link>.
             </p>
           </div>
         </div>

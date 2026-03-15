@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Cost of Living Comparison - Compare Cities US, UK, Europe",
+  title: "Cost of Living Calculator - Compare Cities & Equivalent Salary",
   description:
-    "Compare cost of living between cities. See what salary you need in a new city to match your current lifestyle. US, UK, Germany.",
+    "Free cost of living calculator. Compare two cities and see what salary you need in a new city to match your lifestyle. US, UK, Germany, Europe.",
   openGraph: {
-    title: "Cost of Living Comparison | Paycheck & COL Hub",
-    description: "Compare cities and equivalent salaries for US, UK & Europe.",
+    title: "Cost of Living Calculator | Compare Cities | Paycheck & COL Hub",
+    description: "Free cost of living calculator. Compare cities and equivalent salary for US, UK & Europe.",
   },
 };
 

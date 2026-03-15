@@ -42,10 +42,10 @@ export default function SalaryCalculatorPage() {
     <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6">
       <div className="mb-8">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
-          Net Salary Calculator
+          Paycheck Calculator & Net Salary Calculator
         </h1>
         <p className="mt-2 text-slate-600">
-          Estimate your take-home pay after income tax and social security in the US, UK, and Germany.
+          Use this free paycheck calculator and net salary calculator to estimate your take-home pay after income tax and social security in the US, UK, and Germany.
         </p>
       </div>
 

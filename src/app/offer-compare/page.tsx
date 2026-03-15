@@ -79,10 +79,10 @@ export default function OfferComparePage() {
     <div className="mx-auto max-w-5xl px-4 py-8 sm:px-6">
       <div className="mb-8">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
-          Job Offer Compare
+          Job Offer Compare Calculator
         </h1>
         <p className="mt-2 text-slate-600">
-          Compare two job offers by location and salary. We show take-home pay and cost-of-living adjusted value.
+          Use this free job offer compare calculator to compare two job offers by location and salary. We show take-home pay and cost-of-living adjusted value.
         </p>
       </div>
 

@@ -28,10 +28,10 @@ export default function CostOfLivingPage() {
     <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6">
       <div className="mb-8">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
-          Cost of Living Comparison
+          Cost of Living Calculator
         </h1>
         <p className="mt-2 text-slate-600">
-          Compare two cities and see what salary you’d need in the new city to keep the same lifestyle.
+          Use this free cost of living calculator to compare two cities and see what salary you’d need in the new city to keep the same lifestyle.
         </p>
       </div>
 

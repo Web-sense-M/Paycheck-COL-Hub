@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Job Offer Compare - Compare Two Offers by Salary & Location",
+  title: "Job Offer Compare Calculator - Compare Two Offers by Salary & Location",
   description:
-    "Compare two job offers by take-home pay and cost of living. See which offer gives you more purchasing power in US, UK & Europe.",
+    "Free job offer compare calculator. Compare two job offers by take-home pay and cost of living. See which offer gives you more purchasing power.",
   openGraph: {
-    title: "Job Offer Compare | Paycheck & COL Hub",
-    description: "Compare job offers by salary and location with tax and COL adjustment.",
+    title: "Job Offer Compare Calculator | Compare Two Offers | Paycheck & COL Hub",
+    description: "Free job offer compare calculator. Compare two job offers by salary, tax, and cost of living.",
   },
 };
 
