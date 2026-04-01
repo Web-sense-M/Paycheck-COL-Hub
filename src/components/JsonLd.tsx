@@ -62,6 +62,23 @@ const toolsSchema = {
   ],
 };
 
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Paycheck & COL Hub",
+  url: cleanBase,
+  description:
+    "Free paycheck calculator, salary calculator, cost of living calculator, and job offer compare calculator for US, UK & Europe.",
+  foundingDate: "2026",
+  sameAs: [],
+  contactPoint: {
+    "@type": "ContactPoint",
+    contactType: "customer support",
+    email: "support@paycheckcitycompare.com",
+    url: `${cleanBase}/contact`,
+  },
+};
+
 export function WebsiteJsonLd() {
   return (
     <>
@@ -72,6 +89,10 @@ export function WebsiteJsonLd() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(toolsSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
       />
     </>
   );

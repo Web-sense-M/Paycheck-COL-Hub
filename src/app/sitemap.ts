@@ -19,6 +19,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${cleanBase}/contact`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.5 },
     { url: `${cleanBase}/privacy`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.3 },
     { url: `${cleanBase}/terms`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.3 },
+    { url: `${cleanBase}/disclaimer`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.3 },
   ];
 
   const salaryUrls = getSalaryAfterTaxUrls().map((url) => ({
