@@ -7,6 +7,8 @@ export const metadata: Metadata = {
     "Learn about Paycheck & COL Hub: our mission, how we calculate take-home pay and cost of living, our data sources, and our commitment to accuracy.",
 };
 
+const LAST_UPDATED = "April 15, 2026";
+
 export default function AboutPage() {
   return (
     <div className="mx-auto max-w-3xl px-4 py-12 sm:px-6">
@@ -16,6 +18,9 @@ export default function AboutPage() {
       <p className="mt-3 text-lg text-slate-600">
         Free, transparent salary and cost-of-living tools built for real
         financial decisions.
+      </p>
+      <p className="mt-2 text-sm text-slate-500">
+        Last updated: {LAST_UPDATED}
       </p>
 
       <div className="mt-10 space-y-10">
@@ -68,19 +73,19 @@ export default function AboutPage() {
           <div className="mt-3 space-y-4 text-slate-600">
             <p>
               Our salary and tax calculations are built on publicly available,
-              government-published tax brackets and social-contribution rates for
-              each country and region we support. Here is a summary of our
+              government-published tax brackets and social-contribution rates
+              for each country and region we support. Here is a summary of our
               methodology:
             </p>
             <ul className="list-disc space-y-2 pl-6">
               <li>
                 <strong>United States:</strong> We apply current federal income
                 tax brackets (10 %–37 %), Social Security (6.2 % up to the wage
-                cap), Medicare (1.45 %), plus state income tax for every state we
-                cover—including California, New York, Texas, Florida, Illinois,
-                Washington, and more. For states with no income tax (TX, FL, WA,
-                etc.) the state component is zero, making the comparison
-                immediately clear.
+                cap), Medicare (1.45 %), plus state income tax for every state
+                we cover—including California, New York, Texas, Florida,
+                Illinois, Washington, and more. For states with no income tax
+                (TX, FL, WA, etc.) the state component is zero, making the
+                comparison immediately clear.
               </li>
               <li>
                 <strong>United Kingdom:</strong> We use the current personal
@@ -89,10 +94,10 @@ export default function AboutPage() {
                 bands and rates, which we handle independently.
               </li>
               <li>
-                <strong>Germany:</strong> We apply the standard German income tax
-                formula (Einkommensteuer) and the four main social contributions:
-                pension insurance (Rentenversicherung), health insurance
-                (Krankenversicherung), unemployment insurance
+                <strong>Germany:</strong> We apply the standard German income
+                tax formula (Einkommensteuer) and the four main social
+                contributions: pension insurance (Rentenversicherung), health
+                insurance (Krankenversicherung), unemployment insurance
                 (Arbeitslosenversicherung), and long-term care insurance
                 (Pflegeversicherung).
               </li>
@@ -100,8 +105,8 @@ export default function AboutPage() {
             <p>
               Cost-of-living comparisons use relative price indices for housing,
               groceries, transport, and general expenses across major cities. We
-              cross-reference multiple data points to produce a single, intuitive
-              equivalent-salary figure.
+              cross-reference multiple data points to produce a single,
+              intuitive equivalent-salary figure.
             </p>
           </div>
         </section>
@@ -230,17 +235,17 @@ export default function AboutPage() {
             <p>
               Paycheck &amp; COL Hub was created by a small team of finance
               enthusiasts and software engineers who have navigated cross-border
-              job changes themselves. We have lived and worked across the US, UK,
-              and Europe—and we understand how confusing it can be to compare a
-              salary in dollars, pounds, and euros while factoring in wildly
-              different tax systems and living costs.
+              job changes themselves. We have lived and worked across the US,
+              UK, and Europe—and we understand how confusing it can be to
+              compare a salary in dollars, pounds, and euros while factoring in
+              wildly different tax systems and living costs.
             </p>
             <p>
               We built the tools we wished existed when we were making our own
-              relocation decisions. Today, thousands of people use Paycheck &amp;
-              COL Hub every month to plan moves, evaluate offers, and understand
-              their financial picture. We are committed to keeping the tools free
-              and continuously improving them.
+              relocation decisions. Today, thousands of people use Paycheck
+              &amp; COL Hub every month to plan moves, evaluate offers, and
+              understand their financial picture. We are committed to keeping
+              the tools free and continuously improving them.
             </p>
           </div>
         </section>

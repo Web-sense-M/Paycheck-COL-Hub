@@ -49,7 +49,10 @@ function taxFromBrackets(grossAnnual: number, brackets: TaxBracket[]): number {
 
 export type CountryId = "us" | "uk" | "de";
 
-export function getFederalIncomeTax(countryId: CountryId, grossAnnual: number): number {
+export function getFederalIncomeTax(
+  countryId: CountryId,
+  grossAnnual: number,
+): number {
   switch (countryId) {
     case "us":
       return taxFromBrackets(grossAnnual, US_FEDERAL_BRACKETS);
@@ -84,14 +87,13 @@ export function getUSStateTax(regionId: string, grossAnnual: number): number {
   // Very simplified: apply to gross minus rough federal standard deduction
   const deductible = 14600; // 2024 single
   const taxable = Math.max(0, grossAnnual - deductible);
-  return Math.round((taxable * rate) / 100 * 100) / 100;
+  return Math.round(((taxable * rate) / 100) * 100) / 100;
 }
 
 /** Social / NI / Medicare etc. */
 export function getSocialTax(
   countryId: CountryId,
   grossAnnual: number,
-  regionId?: string
 ): number {
   switch (countryId) {
     case "us": {
@@ -120,7 +122,7 @@ export function getSocialTax(
     case "de": {
       // Simplified: pension + unemployment + health + care ~20.225% total
       const rate = 20.225;
-      return Math.round((grossAnnual * rate) / 100 * 100) / 100;
+      return Math.round(((grossAnnual * rate) / 100) * 100) / 100;
     }
     default:
       return 0;
@@ -141,12 +143,12 @@ export interface NetResult {
 export function calculateNet(
   countryId: CountryId,
   grossAnnual: number,
-  regionId: string
+  regionId: string,
 ): NetResult {
   const federal = getFederalIncomeTax(countryId, grossAnnual);
   let state = 0;
   if (countryId === "us") state = getUSStateTax(regionId, grossAnnual);
-  const social = getSocialTax(countryId, grossAnnual, regionId);
+  const social = getSocialTax(countryId, grossAnnual);
   const totalTax = federal + state + social;
   const netAnnual = grossAnnual - totalTax;
   const netMonthly = netAnnual / 12;

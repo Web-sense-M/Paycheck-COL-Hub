@@ -8,12 +8,17 @@ export const metadata: Metadata = {
 };
 
 const LAST_UPDATED = "April 1, 2026";
+const METHODOLOGY_SUMMARY = `Our calculators use published tax tables and typical social contribution rules for each jurisdiction. We default to single-filer assumptions with no additional deductions; cost-of-living indices are blended from public datasets and market reports. See the About page for full source links and a detailed methodology.`;
 
 export default function DisclaimerPage() {
   return (
     <div className="mx-auto max-w-3xl px-4 py-12 sm:px-6">
       <h1 className="text-3xl font-bold text-slate-900">Disclaimer</h1>
       <p className="mt-2 text-slate-600">Last updated: {LAST_UPDATED}</p>
+      <p className="text-sm text-slate-500">
+        Methodology and data sources are summarized below; see About for full
+        details.
+      </p>
 
       <div className="prose prose-slate mt-10 max-w-none space-y-8 text-slate-700">
         <section>
@@ -55,12 +60,31 @@ export default function DisclaimerPage() {
             </li>
             <li>No additional income (e.g., freelance, investment, rental)</li>
             <li>Standard personal allowance where applicable</li>
-            <li>No salary sacrifice or pension contributions beyond defaults</li>
+            <li>
+              No salary sacrifice or pension contributions beyond defaults
+            </li>
           </ul>
           <p>
             Your actual tax liability, take-home pay, and cost of living may
-            differ significantly based on your personal situation, filing status,
-            deductions, credits, employer benefits, and other factors.
+            differ significantly based on your personal situation, filing
+            status, deductions, credits, employer benefits, and other factors.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="text-xl font-semibold text-slate-900">
+            Methodology Summary
+          </h2>
+          <p>{METHODOLOGY_SUMMARY}</p>
+          <p>
+            For full methodology, data sources, and our update history, see the{" "}
+            <a
+              href="/about"
+              className="text-teal-700 underline hover:no-underline"
+            >
+              About
+            </a>{" "}
+            page.
           </p>
         </section>
 
@@ -70,8 +94,8 @@ export default function DisclaimerPage() {
           </h2>
           <p>
             We strive to keep our tax brackets, social contribution rates, and
-            cost-of-living data accurate and up to date. Our data is sourced from
-            official government publications (e.g.,{" "}
+            cost-of-living data accurate and up to date. Our data is sourced
+            from official government publications (e.g.,{" "}
             <a
               href="https://www.irs.gov/"
               target="_blank"
@@ -103,10 +127,10 @@ export default function DisclaimerPage() {
           <p>
             However, tax laws and rates change frequently. We do{" "}
             <strong>not</strong> guarantee that the data on this site is
-            accurate, complete, or current at all times. It may contain errors or
-            omissions. For the most authoritative and up-to-date tax information,
-            always refer directly to the official tax authority in your
-            jurisdiction.
+            accurate, complete, or current at all times. It may contain errors
+            or omissions. For the most authoritative and up-to-date tax
+            information, always refer directly to the official tax authority in
+            your jurisdiction.
           </p>
         </section>
 
@@ -116,11 +140,11 @@ export default function DisclaimerPage() {
           </h2>
           <p>
             Using the Service does not create a professional-client relationship
-            of any kind (including, but not limited to, an
-            accountant-client, attorney-client, or financial advisor-client
-            relationship) between you and Paycheck &amp; COL Hub or its
-            operators. We are not licensed tax professionals, financial advisors,
-            or attorneys, and we do not hold ourselves out as such.
+            of any kind (including, but not limited to, an accountant-client,
+            attorney-client, or financial advisor-client relationship) between
+            you and Paycheck &amp; COL Hub or its operators. We are not licensed
+            tax professionals, financial advisors, or attorneys, and we do not
+            hold ourselves out as such.
           </p>
         </section>
 
@@ -142,11 +166,11 @@ export default function DisclaimerPage() {
             6. Advertising Disclosure
           </h2>
           <p>
-            Paycheck &amp; COL Hub is a free service supported by advertising. We
-            use Google AdSense, which may display personalized or non-personalized
-            advertisements on our pages. Google and its partners may use cookies
-            and other tracking technologies to serve ads based on your interests
-            and browsing history.
+            Paycheck &amp; COL Hub is a free service supported by advertising.
+            We use Google AdSense, which may display personalized or
+            non-personalized advertisements on our pages. Google and its
+            partners may use cookies and other tracking technologies to serve
+            ads based on your interests and browsing history.
           </p>
           <p>
             Advertising revenue helps us keep our tools and content free for all
@@ -162,12 +186,12 @@ export default function DisclaimerPage() {
             7. Limitation of Liability
           </h2>
           <p>
-            To the fullest extent permitted by applicable law, Paycheck &amp; COL
-            Hub and its operators shall not be liable for any direct, indirect,
-            incidental, special, consequential, or punitive damages—including
-            lost profits, lost data, or any other losses—arising from your use
-            of or reliance on the Service or any information provided on it. Use
-            the Service at your own risk.
+            To the fullest extent permitted by applicable law, Paycheck &amp;
+            COL Hub and its operators shall not be liable for any direct,
+            indirect, incidental, special, consequential, or punitive
+            damages—including lost profits, lost data, or any other
+            losses—arising from your use of or reliance on the Service or any
+            information provided on it. Use the Service at your own risk.
           </p>
         </section>
 

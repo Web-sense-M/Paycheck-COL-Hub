@@ -3,35 +3,68 @@
  * Replace with your actual ad component once approved.
  * Recommended: use data-ad-slot and data-ad-format for responsive ads.
  */
+import { useEffect, useRef } from "react";
+
 type AdSlotProps = {
   id?: string;
-  format?: "display" | "rectangle" | "horizontal" | "vertical";
+  client?: string; // ca-pub-xxxx
+  slot?: string; // data-ad-slot
   className?: string;
+  "aria-label"?: string;
 };
 
-export default function AdSlot({
-  id = "ad-slot",
-  format = "display",
-  className = "",
-}: AdSlotProps) {
+// Production-safe AdSlot: renders client/slot only on the client, uses a ref,
+// and guards against double-initialization to avoid page errors and CLS.
+export default function AdSlot(props: Readonly<AdSlotProps>) {
+  const {
+    id = "ad-slot",
+    client,
+    slot,
+    className = "",
+    "aria-label": ariaLabel = "Advertisement",
+  } = props;
+  const containerRef = useRef<HTMLElement | null>(null);
+
+  useEffect(() => {
+    // Only attempt to render if client+slot are provided and we're in the browser
+    if (!client || !slot) return;
+    if (!containerRef.current) return;
+
+    // Prevent double-rendering
+    const existing = containerRef.current.querySelector("ins.adsbygoogle");
+    if (existing) return;
+
+    const ins = document.createElement("ins");
+    ins.className = "adsbygoogle";
+    ins.style.display = "block";
+    // Prefer dataset for data- attributes
+    ins.dataset.adClient = client;
+    ins.dataset.adSlot = slot;
+    ins.dataset.adFormat = "auto";
+    ins.dataset.fullWidthResponsive = "true";
+
+    containerRef.current.appendChild(ins);
+
+    // If the AdSense script has initialized, push the slot; otherwise do nothing.
+    const globalWithAds = globalThis as unknown as { adsbygoogle?: unknown[] };
+    const adsArray =
+      globalWithAds.adsbygoogle ?? (globalWithAds.adsbygoogle = []);
+    if (Array.isArray(adsArray)) {
+      adsArray.push({});
+    }
+  }, [client, slot]);
+
   return (
-    <div
+    <aside
       id={id}
+      ref={containerRef}
       className={`ad-slot ${className}`}
-      role="presentation"
-      aria-label="Advertisement"
+      aria-label={ariaLabel}
     >
-      {/* When using AdSense, uncomment and add your client + slot:
-      <ins
-        className="adsbygoogle"
-        style={{ display: "block" }}
-        data-ad-client="ca-pub-XXXXX"
-        data-ad-slot="XXXXX"
-        data-ad-format="auto"
-        data-full-width-responsive="true"
-      />
-      */}
-      <span>Ad placeholder</span>
-    </div>
+      {/* Visible fallback for users or when ads are disabled */}
+      <noscript>
+        <div className="text-xs text-slate-500">Advertisement</div>
+      </noscript>
+    </aside>
   );
 }

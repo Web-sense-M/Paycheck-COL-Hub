@@ -15,8 +15,7 @@ const faqItems = [
       "Our calculations are based on officially published tax brackets and social contribution rates for each country and region we support. We source data from the IRS (US), HMRC (UK), and the German Federal Ministry of Finance. Results are simplified estimates assuming a single filer with no extra deductions or credits. For precise figures, check with your tax authority or a qualified tax advisor.",
   },
   {
-    question:
-      "What is a cost of living calculator and how does it work?",
+    question: "What is a cost of living calculator and how does it work?",
     answer:
       "A cost of living calculator compares the relative expense of living in two different cities. You enter your current salary and two cities, and the tool calculates an equivalent salary—the amount you would need in the new city to maintain a similar standard of living. We use indices for housing, groceries, transport, and general expenses across major US, UK, and European cities.",
   },
@@ -45,7 +44,7 @@ export default function HomePage() {
       <FAQJsonLd items={faqItems} />
 
       {/* Hero */}
-      <section className="border-b border-slate-200 bg-gradient-to-b from-white to-slate-50/50">
+      <section className="border-b border-slate-200 bg-linear-to-b from-white to-slate-50/50">
         <div className="mx-auto max-w-4xl px-4 py-16 text-center sm:px-6 sm:py-24">
           <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">
             Paycheck Calculator, Salary Calculator &amp; Cost of Living
@@ -244,9 +243,9 @@ export default function HomePage() {
                 Compare Cities &amp; Offers
               </h3>
               <p className="mt-2 text-sm text-slate-600">
-                Use the cost of living calculator to compare two cities, or
-                the job offer compare tool to see which offer gives you more
-                real purchasing power after tax and living costs.
+                Use the cost of living calculator to compare two cities, or the
+                job offer compare tool to see which offer gives you more real
+                purchasing power after tax and living costs.
               </p>
             </div>
           </div>
@@ -257,9 +256,7 @@ export default function HomePage() {
       <section className="border-t border-slate-200 bg-white">
         <div className="mx-auto max-w-5xl px-4 py-16 sm:px-6">
           <div className="flex items-center justify-between">
-            <h2 className="text-2xl font-bold text-slate-900">
-              Latest Guides
-            </h2>
+            <h2 className="text-2xl font-bold text-slate-900">Latest Guides</h2>
             <Link
               href="/guides"
               className="text-sm font-medium text-teal-600 hover:text-teal-700"
@@ -317,8 +314,8 @@ export default function HomePage() {
               show your take-home pay after federal and state tax, social
               security, and National Insurance for the United States (including
               California, New York, Texas, and more), the United Kingdom, and
-              Germany. Use the <strong>salary calculator</strong> to see how much
-              you keep from any gross salary.
+              Germany. Use the <strong>salary calculator</strong> to see how
+              much you keep from any gross salary.
             </p>
             <p>
               Our free{" "}

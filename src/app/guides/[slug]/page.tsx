@@ -9,7 +9,7 @@ const baseUrl =
   process.env.NEXT_PUBLIC_SITE_URL || "https://www.paycheckcitycompare.com/";
 const cleanBase = baseUrl.replace(/\/$/, "");
 
-type Props = { params: Promise<{ slug: string }> };
+type Props = Readonly<{ params: Promise<{ slug: string }> }>;
 
 export async function generateStaticParams() {
   return getAllGuideSlugs().map((slug) => ({ slug }));
@@ -38,7 +38,7 @@ function getRelatedGuides(currentSlug: string) {
     .map((g) => {
       const titleLower = g.title.toLowerCase();
       const score = words.filter(
-        (w) => w.length > 3 && titleLower.includes(w)
+        (w) => w.length > 3 && titleLower.includes(w),
       ).length;
       return { guide: g, score };
     })
@@ -60,13 +60,19 @@ export default async function GuidePage({ params }: Props) {
     headline: guide.title,
     description: guide.description,
     datePublished: guide.publishedAt,
-    dateModified: guide.publishedAt,
+    dateModified: guide.updatedAt || guide.publishedAt,
     url: `${cleanBase}/guides/${slug}`,
-    author: {
-      "@type": "Organization",
-      name: "Paycheck & COL Hub",
-      url: cleanBase,
-    },
+    author: guide.author
+      ? {
+          "@type": "Person",
+          name: guide.author.name,
+          url: guide.author.url || cleanBase,
+        }
+      : {
+          "@type": "Organization",
+          name: "Paycheck & COL Hub",
+          url: cleanBase,
+        },
     publisher: {
       "@type": "Organization",
       name: "Paycheck & COL Hub",
@@ -80,7 +86,7 @@ export default async function GuidePage({ params }: Props) {
 
   const publishedDate = new Date(guide.publishedAt).toLocaleDateString(
     "en-US",
-    { year: "numeric", month: "long", day: "numeric" }
+    { year: "numeric", month: "long", day: "numeric" },
   );
 
   return (
@@ -180,7 +186,10 @@ export default async function GuidePage({ params }: Props) {
                 />
               </svg>
               <span>
-                {Math.max(5, Math.round(guide.content.split(/\s+/).length / 200))}{" "}
+                {Math.max(
+                  5,
+                  Math.round(guide.content.split(/\s+/).length / 200),
+                )}{" "}
                 min read
               </span>
             </div>
@@ -189,7 +198,12 @@ export default async function GuidePage({ params }: Props) {
 
         {/* Content */}
         <div className="mt-8">
-          <GuideContent content={guide.content} />
+          <GuideContent
+            content={guide.content}
+            authorName={guide.author?.name}
+            publishedAt={guide.publishedAt}
+            updatedAt={guide.updatedAt}
+          />
         </div>
 
         {/* Mid-article ad */}
@@ -219,10 +233,7 @@ export default async function GuidePage({ params }: Props) {
             <div>
               <h3 className="font-semibold text-slate-900">
                 About the{" "}
-                <Link
-                  href="/about"
-                  className="text-teal-700 hover:underline"
-                >
+                <Link href="/about" className="text-teal-700 hover:underline">
                   Paycheck &amp; COL Hub Editorial Team
                 </Link>
               </h3>
