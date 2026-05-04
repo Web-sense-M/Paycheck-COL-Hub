@@ -2,7 +2,19 @@ const baseUrl =
   process.env.NEXT_PUBLIC_SITE_URL || "https://www.paycheckcitycompare.com/";
 const cleanBase = baseUrl.replace(/\/$/, "");
 
-const websiteSchema = {
+type JsonLdObject = { [k: string]: unknown };
+
+interface WebsiteSchema {
+  "@context": string;
+  "@type": string;
+  name: string;
+  url: string;
+  description?: string;
+  potentialAction?: JsonLdObject;
+  publisher?: JsonLdObject;
+}
+
+const websiteSchema: WebsiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   name: "Paycheck & COL Hub",

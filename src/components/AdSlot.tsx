@@ -3,6 +3,13 @@
  * Replace with your actual ad component once approved.
  * Recommended: use data-ad-slot and data-ad-format for responsive ads.
  */
+"use client";
+
+/**
+ * Placeholder for Google AdSense units.
+ * Replace with your actual ad component once approved.
+ * Recommended: use data-ad-slot and data-ad-format for responsive ads.
+ */
 import { useEffect, useRef } from "react";
 
 type AdSlotProps = {
